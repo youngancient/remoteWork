@@ -1,0 +1,435 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+a,
+h5 {
+  text-decoration: none;
+  font-size: 18px;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+}
+body {
+  width: 100vw;
+  background: hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bdr {
+  border: 1px solid black;
+}
+.hide {
+  display: none;
+}
+.icon {
+  z-index: 20;
+  color: hsl(0, 0%, 8%);
+}
+i,
+a {
+  color: hsl(0, 0%, 41%);
+}
+i:hover,
+a:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+header {
+  display: flex;
+  margin-top: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.desktop {
+  display: none;
+}
+.outside-click{
+  grid-area: transparent;
+}
+.mobile links{
+  grid-area: link;
+}
+.mobile-link-div {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-areas: "transparent link";
+}
+.bur{
+  border: 2px solid yellow;
+}
+.blur {
+  backdrop-filter: blur(2px);
+  background: hsla(200, 35%, 13%, 0.4);
+}
+.mobile .links {
+  width: 100%;
+  background: hsl(0, 0%, 98%);
+  padding: 30px;
+  transition: transform 0.5s ease;
+}
+.links .features {
+  margin-top: 70px;
+}
+.links a {
+  display: flex;
+  padding: 10px;
+}
+.mobile .direction {
+  margin-left: 10px;
+}
+.mobile-btn {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-btn a {
+  padding: 0;
+}
+.mobile-btn button {
+  height: 50px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 18px;
+}
+.mobile-btn .mobile-reg {
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 15px;
+}
+.mobile .under-features {
+  padding-left: 10px;
+  transition: 0.5s ease;
+}
+.mobile .under-company {
+  padding-left: 5px;
+  transition: 0.5s ease;
+}
+.mobile .under-features h5,
+.mobile .under-company h5 {
+  margin-left: 10px;
+}
+.left {
+  transform: translateX(200%);
+}
+.show {
+  transform: translateX(0);
+}
+.hide {
+  display: none;
+}
+.block {
+  display: block;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.image-div {
+  width: 100%;
+}
+.image-div img {
+  width: 100%;
+  /* height: 600px; */
+}
+.head{
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 37px;
+}
+.h-one{
+    display: flex;
+    justify-content: center;
+}
+#shift{
+    margin-left: 5px;
+}
+.head p{
+    margin-top: 20px;
+    padding: 10px;
+    color: hsl(0, 0%, 41%);
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+}
+.head button{
+    margin-top: 40px;
+    color: hsl(0, 0%, 98%);
+    background: hsl(0, 0%, 8%);
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.head button:hover{
+    color: hsl(0, 0%, 8%);
+    background: transparent;
+    border: 2px solid hsl(0, 0%, 8%);
+}
+.sponsors{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+.sponsors svg{
+    width: 45%;
+}
+@media screen and (min-width: 728px) and (max-width: 998px){
+  header{
+    width: 90%;
+  }
+  h1{
+    font-size: 50px;
+  }
+  a,h5{
+    font-size: 25px;
+  }
+  .mobile-link-div{
+    grid-template-columns: 1fr 1fr;
+  }
+  .mobile .links{
+    width: 100%;
+  }
+  header{
+    font-size: 25px;
+  }
+  
+  .head p{
+    margin-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .head button{
+    margin-top: 20;
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+  }
+  .mobile button{
+    font-size: 25px;
+  }
+  .sponsors{
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  .sponsors svg{
+    width: auto;
+  }
+
+}
+@media screen and (min-width: 998px) {
+  header{
+    width: 100%;
+  }
+  .desktop h5 {
+    font-size: 16px;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .desktop-link-div,
+  .desktop-links,
+  .desktop-btns,
+  .features a,
+  .company a {
+    display: flex;
+    flex-direction: row;
+  }
+  .desktop-link-div {
+    width: 90%;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .desktop-link-div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .desktop-link-div a:hover {
+    border-bottom-style: solid;
+    width: fit-content;
+    border-bottom-color: hsl(0, 0%, 41%);
+  }
+  .desktop-btns a:hover {
+    border-bottom-style: none;
+  }
+  .desktop-links div {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .direction {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  .desktop-btns {
+    margin-right: 10px;
+  }
+  .desktop-btns button, .head button {
+    height: 40px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .desktop-btns .desktop-reg {
+    margin-left: 30px;
+    width: 100px;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+  }
+  .desktop-btns button:hover,
+  a:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  .desktop-btns .desktop-reg:hover {
+    border: 2px solid hsl(0, 0%, 8%);
+  }
+
+  .under-features,
+  .under-company {
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    background: hsl(0, 0%, 98%);
+    z-index: 10;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 5px 1px hsla(200, 35%, 13%, 0.5);
+  }
+  .under-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .under-features a,
+  .under-company a {
+    display: flex;
+    margin-top: 5px;
+    padding: 5px;
+    align-items: center;
+  }
+  .under-company {
+    left: 310px;
+  }
+  .under-features svg,
+  .under-company svg {
+    margin-right: 5px;
+  }
+  .hide {
+    display: none;
+  }
+  .sub-main {
+    grid-area: submain;
+  }
+  .image-div {
+    grid-area: imagegrid;
+    width: 100%;
+  }
+  .image-div img {
+    width: 100%;
+    height: 600px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    grid-template-areas: "submain imagegrid";
+    padding-left: 50px;
+    padding-right: 80px;
+    width: 100vw;
+    margin-bottom: 20px;
+}
+.head{
+    margin-top: 70px;
+    padding: 30px;
+    padding-left: 80px;
+    display: block;
+}
+h1{
+    font-size: 70px;
+}
+.h-one{
+    display: block;
+}
+.head p{
+    margin-top: 20px;
+    padding-right: 50px;
+    width: 80%;
+    color: hsl(0, 0%, 41%);
+    text-align: left;
+    line-height: 25px;
+}
+.head button{
+    margin-top: 40px;
+    color: hsl(0, 0%, 98%);
+    background: hsl(0, 0%, 8%);
+    height: 50px;
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.head button:hover{
+    color: hsl(0, 0%, 8%);
+    background: transparent;
+    border: 2px solid hsl(0, 0%, 8%);
+}
+.sponsors{
+    margin-top: 50px;
+    margin-left: 80px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.sponsors svg{
+    width: 100%;
+}
+.under-features h5,
+.under-company h5 {
+  font-size: 13px;
+}
+}
+

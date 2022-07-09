@@ -78,7 +78,7 @@ header {
   width: 100%;
   background: hsl(0, 0%, 98%);
   padding: 30px;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .links .features {
   margin-top: 70px;
@@ -114,11 +114,11 @@ header {
 }
 .mobile .under-features {
   padding-left: 10px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .mobile .under-company {
   padding-left: 5px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .mobile .under-features h5,
 .mobile .under-company h5 {
@@ -198,6 +198,15 @@ h1{
 }
 .sponsors svg{
     width: 45%;
+}
+@media screen and (max-width: 374px){
+  h1{
+    font-size: 35px;
+  }
+  .head p{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media screen and (min-width: 728px) and (max-width: 998px){
   header{
